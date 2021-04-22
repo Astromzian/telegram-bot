@@ -1,18 +1,15 @@
-Package          Version
----------------- ---------
-certifi          2020.12.5
-chardet          4.0.0
-click            7.1.2
-Cython           0.29.23
-Flask            1.1.2
-idna             2.10
-itsdangerous     1.1.0
-Jinja2           2.11.3
-MarkupSafe       1.1.1
-pip              21.0.1
-pyTelegramBotAPI 3.7.7
-requests         2.25.1
-setuptools       56.0.0
-urllib3          1.26.4
-vedis            0.7.1
-Werkzeug         1.0.1
+chardet ==4.0.0
+click ==7.1.2
+Cython == 0.29.23
+Flask == 1.1.2
+idna  == 2.10
+itsdangerous == 1.1.0
+Jinja2 == 2.11.3
+MarkupSafe == 1.1.1
+pip  == 21.0.1
+pyTelegramBotAPI == 3.7.7
+requests == 2.25.1
+setuptools  == 56.0.0
+urllib3  == 1.26.4
+vedis  == 0.7.1
+Werkzeug  == 1.0.1
