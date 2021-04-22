@@ -11,16 +11,16 @@ server = Flask(__name__)
 @bot.message_handler(commands=['start'])
 def send_info(message):
    text = (
-   "<b>Welcome to the Ybot!</b>\n"
-   "Say Hello to the bot to get a reply from it!"
+       "<b>Welcome to the Ыbot!</b>\n"
+       "Say Hello to the bot to get a reply from it!"
    )
    bot.send_message(message.chat.id, text, parse_mode='HTML')
 # Если строка на входе непустая, то бот повторит ее
 
 
-@bot.message_handler(func=lambda message: True)
-def reply_to_message(message):
-    bot.reply_to(message.chat.id, message.text, parse_mode='HTML')
+@bot.message_handler(func=lambda m: True)
+def echo_all(message):
+    bot.reply_to(message, message.text)
 
 
 @server.route('/' + TOKEN, methods=['POST'])
@@ -35,7 +35,6 @@ def webhook():
     bot.set_webhook(url='https://mytelegramproject.herokuapp.com/' + TOKEN)  #
     return "!", 200
 
-bot.polling()
 
 if __name__ == "__main__":
     server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
