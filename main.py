@@ -8,6 +8,7 @@ bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
 
+
 # Если строка на входе непустая, то бот повторит ее
 @bot.message_handler(func=lambda msg: msg.text is not None)
 def reply_to_message(message):
