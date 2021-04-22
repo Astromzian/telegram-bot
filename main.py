@@ -8,7 +8,13 @@ bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
 
-
+@bot.message_handler(commands=['start'])
+def send_info(message):
+   text = (
+   "<b>Welcome to the Medium 🤖!</b>\n"
+   "Say Hello to the bot to get a reply from it!"
+   )
+   bot.send_message(message.chat.id, text, parse_mode='HTML')
 # Если строка на входе непустая, то бот повторит ее
 @bot.message_handler(func=lambda msg: msg.text is not None)
 def reply_to_message(message):
