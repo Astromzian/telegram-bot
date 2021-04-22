@@ -18,7 +18,7 @@ def send_info(message):
 # Если строка на входе непустая, то бот повторит ее
 
 
-@bot.message_handler(func=lambda msg: msg.text is True)
+@bot.message_handler(func=lambda msg: True)
 def reply_to_message(message):
     bot.reply_to(message.chat.id, message.text)
 
